@@ -348,8 +348,8 @@ Take a break, stretch, meet some neighbors, and ask the staff if you have any qu
 > Let's get back to some interactive examples. Keep typing them out! You'll thank yourself tomorrow. :)
 
 ## Booleans
+⚖
 
-<img src="Scales.png" title="Scales.png" alt="Scales.png" width="100" />
 
 So far, the code we've written has been <i>unconditional</i>: no choice is getting made, and the code is always run. Python has another data type called a <b>boolean</b> that is helpful for writing code that makes decisions. There are two booleans: `True` and `False`.
 
