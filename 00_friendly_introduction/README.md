@@ -20,7 +20,7 @@ In the first hour we cover how to use the command line on your computer to:
 - Navigate directories (in Windows, OSX, or Linux)
 - Run Python files
 
-We're going cover the material in [tutorial.md](00_friendly_introduction/tutorial.md).
+We're going cover the material in [tutorial.md](tutorial.md).
 The tutorial is adapted from the Boston Python Workshop for Women, and updated to Python 3.
 
 In the second hour we will cover writing a Python script in a file.
