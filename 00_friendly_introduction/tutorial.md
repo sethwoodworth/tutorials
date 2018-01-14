@@ -12,7 +12,7 @@ No copying and pasting! You'll learn the concepts better if you type them out yo
 
 ## Math
 
-🖩
+🖩 +×±\⌷
 
 
 Math in Python looks a lot like math you type into a calculator. A Python prompt makes a great calculator if you need to crunch some numbers and don't have a good calculator handy.
@@ -152,10 +152,9 @@ are also both valid and mean the same thing. You should strive to be consistent 
 You aren't cheating and skipping typing these exercises out, are you? Good! :)
 
 ## Strings
-
-𝔰𝔱𝔯𝔦𝔫𝔤𝔰
-𝕾𝖙𝖗𝖎𝖓𝖌𝖘❗
-Ⓢⓣⓡⓘⓝⓖⓢ!
+    𝔰𝔱𝔯𝔦𝔫𝔤𝔰
+    𝕾𝖙𝖗𝖎𝖓𝖌𝖘❗
+    Ⓢⓣⓡⓘⓝⓖⓢ!
 
 So far we've seen two data types: <b>integers</b> and <b>floats</b>. Another useful data type is a <b>string</b>, which is just what Python calls a bunch of characters (like numbers, letters, whitespace, and punctuation) put together. Strings are indicated by being surrounded by quotes:
 
@@ -400,8 +399,7 @@ Or check for a lack of containment with `not in`:
     "Perl" not in "Boston Python Workshop"
 
 ## Flow Control
-
-<img src="Fork.png" title="Fork.png" alt="Fork.png" width="100" />
+⎇
 
 #### if statements
 
@@ -504,7 +502,10 @@ If color had been “purple”, that code wouldn't have printed anything.
 
 ## Writing Functions
 
-<img src="Quill.png" title="Quill.png" alt="Quill.png" width="100" />
+    ∈ & || ∧ ¬a
+    :(){ :|:& };:
+
+
 
 We talked a bit about functions when we introduced the `type()` function. Let's review what we know about functions:
 
