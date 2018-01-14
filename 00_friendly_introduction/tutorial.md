@@ -1,3 +1,5 @@
+# Python 3 Tutorial
+
 This tutorial covers several core programming concepts that we'll build upon during an interactive lecture tomorrow morning. It will take 1-2 hours to complete. There's a break in the middle, and exercises at the middle and end to help review the material.
 
 This is an interactive tutorial! As you go through this tutorial, any time you see something that looks like this:
@@ -8,10 +10,8 @@ you should type the expression at a Python prompt, hitting Return after every li
 
 No copying and pasting! You'll learn the concepts better if you type them out yourself.
 
-Math
-----
+## Math
 
-<img src="Calculator.png" title="Calculator.png" alt="Calculator.png" width="100" />
 🖩
 
 
@@ -53,10 +53,8 @@ What do you need to do to get the right answer? Use data types that understand d
 
 The two previous expressions produce the same result. You only need to make one of the numbers in each fraction have a decimal. When the Python interpreter goes to do the division, it notices that one of the numbers in the fraction cares about decimals and says “that means I have to make the other number care about decimals too”.
 
-Types
------
+## Types
 
-<img src="Geometry.png" title="Geometry.png" alt="Geometry.png" width="150" />
 ◯▲□⬟⬢
 
 There's a helpful <b>function</b> (more on what a function is in a second) called `type` that tells you what kind of thing -- what <b>data type</b> -- Python thinks something is. We can check for ourselves that Python considers '1' and '1.0' to be different data types:
@@ -78,10 +76,9 @@ So in this case 'type' is the name of the function, and it takes one argument; i
 
 Stop here and try hitting the Up arrow on your keyboard a few times. The Python <b>interpreter</b> saves a history of what you've entered, so you can arrow up to old commands and hit Return to re-run them!
 
-Variables
----------
+## Variables
+> TODO: add image for variables here
 
-<img src="Fraction.png" title="Fraction.png" alt="Fraction.png" width="100" />
 
 A lot of work gets done in Python using variables. Variables are a lot like the variables in math class, except that in Python variables can be of any data type, not just numbers.
 
@@ -95,16 +92,15 @@ Giving a name to something, so that you can refer to it by that name, is called 
 
 Variables can't have spaces or other special characters, and they need to start with a letter. Here are some valid variable names:
 
-`magic_number = 1500`
-`amountOfFlour = .75`
-`my_name = `“`Jessica`”
+    magic_number = 1500
+    amountOfFlour = .75
+    my_name = “Jessica”
 
 Projects develop naming conventions: maybe multi-word variable names use underscores (like `magic_number`), or “camel case” (like `amountOfFlour`). The most important thing is to be consistent within a project, because it makes the code more readable.
 
-Output
-------
+## Output
+·····•····· ᗤ
 
-<img src="Pacman.png" title="Pacman.png" alt="Pacman.png" width="100" />
 
 Notice how if you type a 4 and hit enter, the Python interpreter spits a 4 back out:
 
@@ -155,10 +151,8 @@ are also both valid and mean the same thing. You should strive to be consistent 
 
 You aren't cheating and skipping typing these exercises out, are you? Good! :)
 
-Strings
--------
+## Strings
 
-<img src="Letter.png" title="Letter.png" alt="Letter.png" width="100" />
 𝔰𝔱𝔯𝔦𝔫𝔤𝔰
 𝕾𝖙𝖗𝖎𝖓𝖌𝖘❗
 Ⓢⓣⓡⓘⓝⓖⓢ!
@@ -212,7 +206,7 @@ There are many kinds of Python errors, with descriptive names to help us humans 
 
 Python gives us a helpful error message as part of the TypeError:
 
-“`cannot`` ``concatenate`` ``'str'`` ``and`` ``'int'`` ``objects`”
+    “cannot concatenate 'str' and 'int' objects”
 
 We saw above the we can concatenate strings:
 
@@ -247,7 +241,7 @@ There's another useful function that works on strings called `len`. `len` return
 We've been using double quotes around our strings, but you can use either double or single quotes:
 
     print('Hello')
-    print( "Hello")
+    print("Hello")
 
 Like with spacing above, use whichever quotes make the most sense for you, but be consistent.
 
@@ -257,7 +251,7 @@ You do have to be careful about using quotes inside of strings:
 
 This gives us another <b>traceback</b>, for a new kind of error, a `SyntaxError`. When Python looks at that expression, it sees the string 'I' and then
 
-`m a happy camper'`
+    m a happy camper'
 
 which it doesn't understand -- it's not 'valid' Python. Those letters aren't variables (we haven't assigned them to anything), and that trailing quote isn't balanced. So it raises a `SyntaxError`.
 
@@ -279,10 +273,8 @@ One fun thing about strings in Python is that you can multiply them:
     b = "Birthday"
     print((h + b) * 10)
 
-Part 1 Practice
----------------
+## Part 1 Practice
 
-<img src="Detective.png" title="Detective.png" alt="Detective.png" width="100" />
 
 Read the following expressions, but don't execute them. Guess what the output will be. After you've made a guess, copy and paste the expressions at a Python prompt and check your guess.
 
@@ -329,35 +321,33 @@ Congratulations! You've learned about and practiced math, strings, variables, da
 
 Take a break, stretch, meet some neighbors, and ask the staff if you have any questions about this material.
 
-Python scripts
---------------
+> Python scripts
+> --------------
 
-<img src="Treasure_map.png" title="Treasure_map.png" alt="Treasure_map.png" width="100" />
 
-Until now we've been executing commands at the Python prompt. This is great for math, short bits of code, and testing. For longer ideas, it's easier to store the code in a file.
+> Until now we've been executing commands at the Python prompt. This is great for math, short bits of code, and testing. For longer ideas, it's easier to store the code in a file.
 
-1.  Download the file <http://mit.edu/jesstess/www/BostonPythonWorkshop6/nobel.py> by right-clicking on it and saying to save it as a “.py” file to your Desktop. The “.py” extension hints that this is a Python script.
-2.  Open a command prompt, and use the navigation commands (`dir` and `cd` on Windows, `ls`, `pwd`, and `cd` on OS X and Linux) to navigate to your home directory. See [navigating from a command prompt](Boston_Python_Workshop_6/Friday#Goal_.234:_practice_navigating_the_computer_from_a_command_prompt "wikilink") for a refresher on those commands.
-3.  Once you are in your home directory, execute the contents of `nobel.py` by typing
-        python nobel.py
+> 1.  Download the file <http://mit.edu/jesstess/www/BostonPythonWorkshop6/nobel.py> by right-clicking on it and saying to save it as a “.py” file to your Desktop. The “.py” extension hints that this is a Python script.
+> 2.  Open a command prompt, and use the navigation commands (`dir` and `cd` on Windows, `ls`, `pwd`, and `cd` on OS X and Linux) to navigate to your home directory. See [navigating from a command prompt](Boston_Python_Workshop_6/Friday#Goal_.234:_practice_navigating_the_computer_from_a_command_prompt "wikilink") for a refresher on those commands.
+> 3.  Once you are in your home directory, execute the contents of `nobel.py` by typing
+>         python nobel.py
 
-    at a command prompt.
+>     at a command prompt.
 
-    `nobel.py` introduces two new concepts: comments and multiline strings.
+>     `nobel.py` introduces two new concepts: comments and multiline strings.
 
-4.  Open `nobel.py` in your text editor (see [preparing your text editor](Boston_Python_Workshop_6/Friday#Goal_.232:_prepare_a_text_editor "wikilink") for a refresher on starting the editor).
-5.  Read through the file in your text editor carefully and check your understanding of both the comments and the code.
+> 4.  Open `nobel.py` in your text editor (see [preparing your text editor](Boston_Python_Workshop_6/Friday#Goal_.232:_prepare_a_text_editor "wikilink") for a refresher on starting the editor).
+> 5.  Read through the file in your text editor carefully and check your understanding of both the comments and the code.
 
-Study the script until you can answer these questions:
+> Study the script until you can answer these questions:
 
-1.  How do you comment code in Python?
-2.  How do you print just a newline?
-3.  How do you print a multi-line string so that whitespace is preserved?
+> 1.  How do you comment code in Python?
+> 2.  How do you print just a newline?
+> 3.  How do you print a multi-line string so that whitespace is preserved?
 
-Let's get back to some interactive examples. Keep typing them out! You'll thank yourself tomorrow. :)
+> Let's get back to some interactive examples. Keep typing them out! You'll thank yourself tomorrow. :)
 
-Booleans
---------
+## Booleans
 
 <img src="Scales.png" title="Scales.png" alt="Scales.png" width="100" />
 
@@ -409,8 +399,7 @@ Or check for a lack of containment with `not in`:
 
     "Perl" not in "Boston Python Workshop"
 
-Flow Control
-------------
+## Flow Control
 
 <img src="Fork.png" title="Fork.png" alt="Fork.png" width="100" />
 
@@ -512,8 +501,8 @@ If color had been “purple”, that code wouldn't have printed anything.
 
 <b>Remember that '=' is for assignment and '==' is for comparison.</b>
 
-Writing Functions
------------------
+
+## Writing Functions
 
 <img src="Quill.png" title="Quill.png" alt="Quill.png" width="100" />
 
@@ -532,25 +521,25 @@ Executing this code assigns the length of the string “Mississippi” to the va
 
 We can write our own functions to encapsulate bits of useful work so we can reuse them. Here's how you do it:
 
-<b>Step 1: write a function signature</b>
+### Step 1: write a function signature
 
 A <b>function signature</b> tells you how the function will be called. It starts with the keyword `def`, which tells Python that you are defining a function. Then comes a space, the name of your function, an open parenthesis, the comma-separated input <b>parameters</b> for your function, a close parenthesis, and a colon. Here's what a function signature looks like for a function that takes no arguments:
 
-`def myFunction():`
+    def myFunction():
 
 Here's what a function signature looks like for a function that takes one argument called `string`:
 
-`def myFunction(string):`
+    def myFunction(string):
 
 And one for a function that takes two arguments:
 
-`def myFunction(myList, myInteger):`
+    def myFunction(myList, myInteger):
 
 Parameters should have names that usefully describe what they are used for in the function.
 
 We've used the words <b>parameters</b> and <b>arguments</b> seemingly interchangeably to reference the input to functions. The distinction isn't really important right now, but if you're curious: in function signatures the input is called parameters, and when you are calling the function the input is called arguments.
 
-<b>Step 2: do useful work inside the function</b>
+### Step 2: do useful work inside the function
 
 Underneath the function signature you do your useful work. Everything inside the function is indented, just like with if/else blocks, so Python knows that it is a part of the function.
 
@@ -559,7 +548,7 @@ You can use the variables passed into the function as parameters, just like you 
     def add(x, y):
         result = x + y
 
-<b>Step 3: return something</b>
+### Step 3: return something
 
 If you want to be able to assign a variable to the output of a function, the function has to <b>return that output</b> using the `return` keyword.
 
@@ -605,13 +594,8 @@ Once you define a function you can use it as many times as you want:
 
 Functions don't have to return anything, if you don't want them to. They usually return something because we usually want to be able to assign variables to their output.
 
-End of Part 2
--------------
+## End of Part 2
 
 Congratulations! You've learned about and practiced executing Python scripts, booleans, conditionals, and if/else blocks, and you've written your own Python functions. This is a huge, huge accomplishment!
 
-<img src="Champagne.png" title="fig:Champagne.png" alt="Champagne.png" width="100" /><img src="Party.png" title="fig:Party.png" alt="Party.png" width="125" />
-
-Take a break, stretch, meet some neighbors, and ask the staff if you have any questions about this material.
-
-[« Back to the Friday Workshop page](Boston_Python_Workshop_6/Friday "wikilink")
+🍾🎉🎉
