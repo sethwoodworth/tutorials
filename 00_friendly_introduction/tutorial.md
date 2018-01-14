@@ -1,5 +1,3 @@
-Welcome to the Friday tutorial!
-
 This tutorial covers several core programming concepts that we'll build upon during an interactive lecture tomorrow morning. It will take 1-2 hours to complete. There's a break in the middle, and exercises at the middle and end to help review the material.
 
 This is an interactive tutorial! As you go through this tutorial, any time you see something that looks like this:
@@ -14,6 +12,8 @@ Math
 ----
 
 <img src="Calculator.png" title="Calculator.png" alt="Calculator.png" width="100" />
+🖩
+
 
 Math in Python looks a lot like math you type into a calculator. A Python prompt makes a great calculator if you need to crunch some numbers and don't have a good calculator handy.
 
@@ -33,6 +33,7 @@ Math in Python looks a lot like math you type into a calculator. A Python prompt
     2 * 3
 
 ### Division
+TODO: update this for python 3
 
     4 / 2
     1 / 2
@@ -56,6 +57,7 @@ Types
 -----
 
 <img src="Geometry.png" title="Geometry.png" alt="Geometry.png" width="150" />
+◯▲□⬟⬢
 
 There's a helpful <b>function</b> (more on what a function is in a second) called `type` that tells you what kind of thing -- what <b>data type</b> -- Python thinks something is. We can check for ourselves that Python considers '1' and '1.0' to be different data types:
 
@@ -157,6 +159,9 @@ Strings
 -------
 
 <img src="Letter.png" title="Letter.png" alt="Letter.png" width="100" />
+𝔰𝔱𝔯𝔦𝔫𝔤𝔰
+𝕾𝖙𝖗𝖎𝖓𝖌𝖘❗
+Ⓢⓣⓡⓘⓝⓖⓢ!
 
 So far we've seen two data types: <b>integers</b> and <b>floats</b>. Another useful data type is a <b>string</b>, which is just what Python calls a bunch of characters (like numbers, letters, whitespace, and punctuation) put together. Strings are indicated by being surrounded by quotes:
 
@@ -176,7 +181,7 @@ You can smoosh strings together (called “concatenation”) using the '+' sign:
     "Hello" + "World"
 
     name = "Jessica"
-    print "Hello " + name
+    print("Hello " + name)
 
 ### Printing
 
@@ -184,21 +189,22 @@ You can print strings using `print`:
 
     h = "Hello"
     w = "World"
-    print h + w
+    print(h + w)
 
     my_string = "Alpha " + "Beta " + "Gamma " + "Delta"
-    print my_string
+    print(my_string)
 
 How about printing different data types together?
 
-    print "Hello" + 1
+    print("Hello" + 1)
 
 Hey now! The output from the previous example was really different and interesting; let's break down exactly what happened:
 
-`>>> print `“`Hello`”` + 1`
-`Traceback (most recent call last):`
-`File `“<stdin>”`, line 1, in `<module>
-`TypeError: cannot concatenate 'str' and 'int' objects`
+    >>> print("Hello" + 1)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: must be str, not int
+
 
 Python is giving us a <b>traceback</b>. A traceback is details on what was happening when Python encountered an Exception or Error -- something it doesn't know how to handle.
 
@@ -210,19 +216,19 @@ Python gives us a helpful error message as part of the TypeError:
 
 We saw above the we can concatenate strings:
 
-    print "Hello" + "World"
+    print("Hello" + "World")
 
 works just fine.
 
 However,
 
-    print "Hello" + 1
+    print("Hello" + 1)
 
 produces a `TypeError`. We are telling Python to concatenate a string and an integer, and that's not something Python understands how to do.
 
 We can convert an integer into a string ourselves, using the `str` function:
 
-    print "Hello" + str(1)
+    print("Hello" + str(1))
 
 Like the `type` function from before, the `str` function takes 1 argument. In the above example it took the integer 1. `str` takes a Python object as input and produces a string version of that input as output.
 
@@ -230,24 +236,24 @@ Like the `type` function from before, the `str` function takes 1 argument. In th
 
 There's another useful function that works on strings called `len`. `len` returns the length of a string as an integer:
 
-    print len("Hello")
-    print len("")
+    print(len("Hello"))
+    print(len(""))
     fish = "humuhumunukunukuapuaʻa"
     length = str(len(fish))
-    print fish + " is a Hawaiian fish whose name is " + length + " characters long."
+    print(fish + " is a Hawaiian fish whose name is " + length + " characters long.")
 
 ### Quotes
 
 We've been using double quotes around our strings, but you can use either double or single quotes:
 
-    print 'Hello'
-    print "Hello"
+    print('Hello')
+    print( "Hello")
 
 Like with spacing above, use whichever quotes make the most sense for you, but be consistent.
 
 You do have to be careful about using quotes inside of strings:
 
-    print 'I'm a happy camper'
+    print('I'm a happy camper')
 
 This gives us another <b>traceback</b>, for a new kind of error, a `SyntaxError`. When Python looks at that expression, it sees the string 'I' and then
 
@@ -257,21 +263,21 @@ which it doesn't understand -- it's not 'valid' Python. Those letters aren't var
 
 We can use double quotes to avoid this problem:
 
-    print "I'm a happy camper"
+    print("I'm a happy camper")
 
 or we can <b>escape</b> the quote with a backslash:
 
-    print 'I\'m a happy camper'
-    print 'Ada Lovelace is often called the world\'s first programmer.'
-    print "Computer scientist Grace Hopper popularized the term \"debugging\"."
+    print('I\'m a happy camper')
+    print('Ada Lovelace is often called the world\'s first programmer.')
+    print("Computer scientist Grace Hopper popularized the term \"debugging\".")
 
 One fun thing about strings in Python is that you can multiply them:
 
-    print "A" * 40
-    print "ABC" * 12
+    print("A" * 40)
+    print("ABC" * 12)
     h = "Happy"
     b = "Birthday"
-    print (h + b) * 10
+    print((h + b) * 10)
 
 Part 1 Practice
 ---------------
@@ -283,7 +289,7 @@ Read the following expressions, but don't execute them. Guess what the output wi
 1.
 
     total = 1.5 - 1/2 + ((-2.0/2) - (1.0/2))
-    print total
+    print(total)
     type(total)
 
 2.
@@ -291,11 +297,11 @@ Read the following expressions, but don't execute them. Guess what the output wi
     a = "quick"
     b =  "brown"
     c = "fox jumps over the lazy dog"
-    print "The " +  a * 3 + " " +  b * 3 + " " + c
+    print("The " +  a * 3 + " " +  b * 3 + " " + c)
 
 3.
 
-    print 2.0 * 123 + str(2.0) * 123
+    print(2.0 * 123 + str(2.0) * 123)
 
 4.
 
@@ -314,7 +320,7 @@ Read the following expressions, but don't execute them. Guess what the output wi
     k = "|____/___________________________|___________________________||\n"
     l = "|__/___\_._______________________|__|__|__|__|__|__|___|_____||\n"
 
-    print d + f + i + e + b + g + a + c + l + h + j + k
+    print( d + f + i + e + b + g + a + c + l + h + j + k )
 
 End of Part 1
 -------------
@@ -413,14 +419,14 @@ Flow Control
 We can use these expressions that <i>evaluate</i> to booleans to make decisions and conditionally execute code:
 
     if 6 > 5:
-         print "Six is greater than five!"
+         print("Six is greater than five!")
 
 That was our first multi-line piece of code, and the way to enter it at a Python prompt is a little different. First, type the `if 6 > 5:` part, and hit enter. The next line will have `...` as a prompt, instead of the usual `>>>`. This is Python telling us that we are in the middle of a <b>code block</b>, and so long as we indent our code it should be a part of this code block.
 
 Type 4 spaces, and then type `print `“`Six`` ``is`` ``greater`` ``than`` ``five!`”. Hit enter to end the line, and hit enter again to tell Python you are done with this code block. All together, it will look like this:
 
     >>> if 6 > 5:
-    ...      print "Six is greater than five!"
+    ...      print("Six is greater than five!")
     ... 
     Six is greater than five!
 
@@ -429,10 +435,10 @@ So what is going on here? When Python encounters the `if` keyword, it <i>evaluat
 In this case, because 6 really is greater than 5, Python executes the code block under the if statement, and we see “Six is greater than five!” printed to the screen. Guess what will happen with these other expressions, then type them out and see if your guess was correct:
 
     if 0 > 2:
-         print "Zero is greater than two!"
+         print("Zero is greater than two!")
 
     if "banana" in "bananarama":
-        print "I miss the 80s."
+        print("I miss the 80s.")
 
 #### more choices: `if` and `else`
 
@@ -441,9 +447,9 @@ You can use the `else` keyword to execute code only when the `if` expression isn
     sister_age = 15
     brother_age = 12
     if sister_age > brother_age:
-        print "sister is older"
+        print("sister is older")
     else:
-        print "brother is older"
+        print("brother is older")
 
 Like with `if`, the code block under the `else` statement must be indented so Python knows that it is a part of the `else` block.
 
@@ -465,17 +471,17 @@ Guess what will happen when you enter these next two examples, and then type the
 
     temperature = 32
     if temperature > 60 and temperature < 75:
-        print "It's nice and cozy in here!"
+        print("It's nice and cozy in here!")
     else:
-        print "Too extreme for me."
+        print("Too extreme for me.")
 
     hour = 11
     if hour < 7 or hour > 23:
-        print "Go away!"
-        print "I'm sleeping!"
+        print("Go away!")
+        print("I'm sleeping!")
     else:
-        print "Welcome to the cheese shop!"
-        print "Can I interest you in some choice gouda?"
+        print("Welcome to the cheese shop!")
+        print("Can I interest you in some choice gouda?")
 
 You can have as many lines of code as you want in `if` and `else` blocks; just make sure to indent them so Python knows they are a part of the block.
 
@@ -486,21 +492,21 @@ If you have more than two cases, you can use the `elif` keyword to check more ca
     sister_age = 15
     brother_age = 12
     if sister_age > brother_age:
-        print "sister is older"
+        print("sister is older")
     elif sister_age == brother_age:
-        print "sister and brother are the same age"
+        print("sister and brother are the same age")
     else:
-        print "brother is older"
+        print("brother is older")
 
 You don't have to have an `else` block, if you don't need it. That just means there isn't default code to execute when none of the `if` or `elif` conditions are True:
 
     color = "orange"
     if color == "green" or color == "red":
-      print "Christmas color!"
+      print("Christmas color!")
     elif color == "black" or color == "orange":
-      print "Halloween color!"
+      print("Halloween color!")
     elif color == "pink":
-      print "Valentine's Day color!"
+      print("Valentine's Day color!")
 
 If color had been “purple”, that code wouldn't have printed anything.
 
@@ -593,9 +599,9 @@ Once you define a function you can use it as many times as you want:
         return x + y
 
     result = add(1234, 5678)
-    print result
+    print(result)
     result = add(-1.5, .5)
-    print result
+    print(result)
 
 Functions don't have to return anything, if you don't want them to. They usually return something because we usually want to be able to assign variables to their output.
 
