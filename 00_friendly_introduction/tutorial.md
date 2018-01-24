@@ -33,23 +33,22 @@ Math in Python looks a lot like math you type into a calculator. A Python prompt
     2 * 3
 
 ### Division
-TODO: update this for python 3
 
-    4 / 2
-    1 / 2
+    4 // 2
+    1 // 2
 
 Hey now! That last result is probably not what you expected. What's going on here is that integer divison produces an integer. You need a number that knows about the decimal point to get a decimal out of division:
 
-    1.0 / 2
+    1.0 // 2
 
 This means you have to be careful when manipulating fractions. If you were doing some baking and needed to add 3/4 of a cup of flour and 1/4 of a cup of flour, we know in our heads that 3/4 + 1/4 = 1 cup. But try that at the Python prompt:
 
-    3/4 + 1/4
+    3//4 + 1//4
 
 What do you need to do to get the right answer? Use data types that understand decimals for each of the divisions:
 
-    3.0/4 + 1.0/4
-    3.0/4.0 + 1.0/4.0
+    3.0//4 + 1.0//4
+    3.0//4.0 + 1.0//4.0
 
 The two previous expressions produce the same result. You only need to make one of the numbers in each fraction have a decimal. When the Python interpreter goes to do the division, it notices that one of the numbers in the fraction cares about decimals and says “that means I have to make the other number care about decimals too”.
 
